@@ -1,177 +1,191 @@
-**Customer Shopping Behavior Analysis**
+# Retail Customer Behaviour & Revenue Analysis
 
-***End-to-End Data Analyst Project (Python | SQL | Power BI)***
+## Project Overview
+This project analyses customer purchasing behaviour, revenue trends, and subscription patterns using Python, SQL, and Power BI. The objective was to identify which customer segments and product categories contribute most to business revenue and to uncover insights that can support data-driven marketing and customer engagement strategies.
 
-📌 Project Overview
+The analysis combines data cleaning, KPI reporting, SQL-based business analysis, and interactive dashboard development to simulate a real-world analytics workflow.
 
-This project analyzes customer shopping behavior using transactional data to identify revenue drivers, discount usage patterns, and the impact of subscriptions on customer spending.
-The objective is to support data-driven business decisions related to marketing strategy, promotions, and customer engagement.
+---
 
-This repository demonstrates a complete end-to-end data analytics workflow, covering data exploration, business analysis, and dashboard-based storytelling.
+# Project Highlights
+- Analysed customer transaction and demographic data across multiple product categories
+- Performed data cleaning and exploratory analysis using Python
+- Built SQL queries to calculate business KPIs and segment-level insights
+- Developed an interactive Power BI dashboard for self-service analysis
+- Identified that product category had a stronger impact on revenue than customer age
 
-🎯 **Business Problem**
+---
 
-Businesses often struggle to understand:
+# Business Problem
+A retail business wants to better understand:
+- Which customer segments generate the highest revenue
+- Which product categories drive customer spending
+- Whether demographic factors influence purchasing behaviour
+- Which customer groups show higher subscription conversion rates
 
-* Which customer and product attributes contribute most to revenue
+The goal of the analysis is to support better marketing decisions and improve customer targeting strategies.
 
-* Whether discounts actually increase spending
+---
 
-* How subscription status affects customer behavior
+# Dataset Overview
 
-* How operational factors (shipping, seasonality) influence purchases
+The dataset contains customer demographic and transaction-related information, including:
 
-**Key Question**:
+- Customer Age
+- Gender
+- Product Category
+- Purchase Amount
+- Subscription Status
+- Customer Location
+- Transaction Behaviour
 
-How can customer shopping data be used to uncover meaningful patterns and support better business decisions?
+---
 
-🧩 Dataset Summary
+# Tools & Technologies
 
-* Records: 3,900 transactions
+| Tool | Purpose |
+|---|---|
+| Python (Pandas, NumPy, Matplotlib) | Data cleaning and exploratory analysis |
+| SQL | KPI calculations and business analysis |
+| Power BI | Dashboard development and visualisation |
+| Excel | Data review and summary reporting |
+| Google BigQuery / MySQL | SQL query execution |
 
-* Columns: 18
+---
 
-* Data Type: Transaction-level retail data
+# Business Questions
 
-**Key attributes include**:
+The analysis focused on answering the following business questions:
 
-* Customer demographics (Age, Gender, Location)
+1. Which product categories generate the highest revenue?
+2. Does customer age significantly influence spending behaviour?
+3. Which customer groups contribute most to subscription conversions?
+4. Which demographic segments have the highest average purchase value?
+5. How do purchasing patterns vary across categories and customer groups?
 
-* Purchase details (Category, Item Purchased, Purchase Amount)
+---
 
-* Engagement indicators (Previous Purchases, Subscription Status)
+# Data Cleaning & Preparation
 
-* Promotions (Discount Applied)
+The dataset was cleaned and prepared before analysis by:
 
-* Operations (Shipping Type, Payment Method)
+- Handling missing and inconsistent values
+- Validating data types and column formats
+- Removing duplicate records
+- Standardising categorical values
+- Preparing structured datasets for SQL and dashboard reporting
 
-* Customer feedback (Review Rating)
+---
 
-***Data Quality Note***:
-The dataset was largely clean, with minimal missing values in review ratings. Basic data quality checks were performed before analysis.
+# SQL Analysis
 
-🛠️ **Tools & Technologies**
+SQL was used to calculate business KPIs and segment-level insights, including:
 
-* Python: pandas, matplotlib, seaborn (EDA & data preparation)
+- Total Revenue
+- Average Purchase Value
+- Revenue by Product Category
+- Customer Segment Analysis
+- Subscription Conversion Rate
+- Category-wise Purchase Trends
 
-* SQL: PostgreSQL (business-driven queries)
+### Sample SQL Query
 
-* Power BI: Interactive dashboard & KPIs
+```sql
+SELECT product_category,
+       SUM(purchase_amount) AS total_revenue
+FROM customer_data
+GROUP BY product_category
+ORDER BY total_revenue DESC;
+```
 
-Version Control: GitHub
+---
 
-🔍 **Analysis Workflow**
+# Key Insights
 
-**1. Data Preparation & Exploratory Analysis (Python)**
+- Product category had a stronger impact on revenue than customer age
+- Electronics customers showed the highest average purchase value
+- Subscription conversion rates varied significantly across customer groups
+- High-spending customers were concentrated within specific product categories
+- Certain demographic segments contributed disproportionately to total revenue
 
-* Checked for missing values, duplicates, and data types
+---
 
-* Performed exploratory analysis to understand distributions and patterns
+# Power BI Dashboard
 
-* Created derived features (e.g., age groups) for better interpretability
+The Power BI dashboard was developed to help business users interactively explore customer and revenue trends.
 
-**Key observation**:
-Customer spending behavior is non-linear and varies significantly across categories and transaction attributes rather than showing simple linear trends.
+### Dashboard Features
+- KPI Cards
+- Revenue Analysis
+- Category-wise Sales Trends
+- Customer Segment Filters
+- Subscription Behaviour Analysis
+- Interactive Slicers and Drilldowns
 
-**2️. Business Analysis (SQL)**
+---
 
-SQL queries were written to answer specific business questions such as:
+# Dashboard Preview
 
-* Revenue contribution by gender and age group
+## Main Dashboard
+_Add dashboard screenshot here_
 
-* Identification of high-spending customers using discounts
+## Revenue Analysis View
+_Add dashboard screenshot here_
 
-* Comparison of average spend across shipping types
+## Customer Segment Analysis
+_Add dashboard screenshot here_
 
-* Subscription vs non-subscription spending
+---
 
-* Products with high discount dependency
+# Business Recommendations
 
-* Top products within each category
+Based on the analysis:
 
-**3️. Visualization & Insights (Power BI)**
+- Focus marketing campaigns on high-performing product categories
+- Improve subscription targeting for high-spending customer segments
+- Develop personalised promotional strategies based on purchasing behaviour
+- Use segment-level revenue insights to optimise customer engagement efforts
 
-Dashboard Highlights:
+---
 
-* KPI Cards
+# Repository Structure
 
-* Total Revenue
+```text
+retail-customer-behaviour-analysis/
+│
+├── data/
+├── notebooks/
+├── sql/
+├── dashboard/
+├── images/
+├── reports/
+├── README.md
+```
 
-* Total Customers
+---
 
-* Average Spend per Transaction
+# Project Workflow
 
-* % Subscribers
+```text
+Raw Data
+→ Data Cleaning (Python)
+→ Exploratory Analysis
+→ SQL KPI Analysis
+→ Power BI Dashboarding
+→ Business Insights & Recommendations
+```
 
-* % Discounted Transactions
+---
 
-*Key Visuals*
+# Conclusion
 
-* Revenue by product category
+This project demonstrates how SQL, Python, and Power BI can be combined to transform raw customer data into meaningful business insights. The analysis highlights the importance of customer segmentation, KPI reporting, and visual analytics in supporting data-driven business decisions.
 
-* Revenue by age group
+---
 
-* Average spend by subscription status
+# Author
 
-* Discount applied vs purchase amount
+Deepa Thomas  
+Data Analyst | SQL • Python • Power BI • Business Analytics
 
-* Shipping type vs average spend
-
-Filters
-
-Category, Age Group, Season, Subscription Status, Shipping Type
-
-All visuals and KPIs update dynamically based on filters.
-
-<img width="725" height="375" alt="Screenshot 2026-01-28 103207" src="https://github.com/user-attachments/assets/51cb8d8c-a253-4119-88b9-dacef4b9d618" />
-
-
-
-
-
-
-📊 **Key Insights**
-
-* Revenue is driven primarily by product category, not customer age
-
-* Discounts increase transaction frequency but do not significantly increase transaction value
-
-* Subscribed customers do not spend more per transaction, but contribute to consistent engagement
-
-* Faster shipping options show slightly higher average purchase values
-
-* Customer behavior is better explained through grouped analysis than linear trends
-
-✅ **Business Recommendations**
-
-* Optimize discount usage by avoiding blanket promotions and focusing on price-sensitive products
-
-* Position subscriptions as engagement tools rather than price-reduction mechanisms
-
-* Prioritize high-revenue categories for marketing and inventory planning
-
-* Promote faster shipping options for higher-value customer segment
-
-🚀 **Future Enhancements**
-
-* Time-series trend analysis
-
-* Customer lifetime value (CLV)
-
-* Repeat-purchase or churn analysis
-
-* A/B testing of discount strategies
-
-🧠 **Key Learnings**
-
-* Translating business questions into analytical workflows
-
-* Handling real-world, transaction-level data
-
-* Designing KPI-driven dashboards
-
-* Integrating Python, SQL, and Power BI into a cohesive analytics project
-
-* Communicating insights clearly to non-technical stakeholders
-
-***This project is based on/forked from github.com/amlanmohanty1/customer-trends-data-analysis-SQL-Python-PowerBI, with significant modifications.***
+GitHub: https://github.com/deepa905
