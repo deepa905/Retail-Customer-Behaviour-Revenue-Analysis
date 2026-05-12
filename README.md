@@ -126,14 +126,8 @@ The Power BI dashboard was developed to help business users interactively explor
 
 # Dashboard Preview
 
-## Main Dashboard
-_Add dashboard screenshot here_
+<img width="689" height="376" alt="image" src="https://github.com/user-attachments/assets/9c65ab3f-2edb-4a6a-b535-b031bf819879" />
 
-## Revenue Analysis View
-_Add dashboard screenshot here_
-
-## Customer Segment Analysis
-_Add dashboard screenshot here_
 
 ---
 
@@ -157,8 +151,6 @@ retail-customer-behaviour-analysis/
 ├── notebooks/
 ├── sql/
 ├── dashboard/
-├── images/
-├── reports/
 ├── README.md
 ```
 
